@@ -799,7 +799,7 @@ initializeColumns = function() {
 				MUI.updateContent({
 					element: $('mainPanel'),
 					title: 'CK Editor test',
-                                        url:'pages/CKeditor.php',
+                                        url:'pages/CKEditor.php',
 					padding: { top: 8, right: 8, bottom: 8, left: 8 }
 				});
 				

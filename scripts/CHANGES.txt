@@ -1,0 +1,7 @@
+
+Code has been rewritten to sadisfy mootools 1.4.5 no compat.
+
+Darko Hajnal darko.hajnal@domenacom.hr
+http://www.domenacom.hr
+
+ March, 2013.

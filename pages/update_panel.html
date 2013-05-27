@@ -1,0 +1,62 @@
+<div id="test3UpdatePanelformdiv">
+    <pre>
+    <code>
+        Execute on click event on this link
+         &lt;a href="#" id="updatePanelLink" &gt;Update right panel&lt;/a&gt;
+        
+        
+        $('updatePanelLink').addEvent('click', function(e){
+      e.stop();
+            MUI.updateContent({
+                    element: $('help-panel'),
+                    loadMethod: 'xhr',
+                    url: 'pages/update_panel_right_panel_content.html',
+                    padding: { top: 8, right: 8, bottom: 8, left: 8 }
+            });
+      
+      
+  });
+  
+    </code>
+</pre>
+        <a href="#" id="updatePanelLink" >Update right panel</a>
+    
+</div>
+
+<button type="button" class="button" id="restoreRightPanel">Restore right panel</button>
+
+<script type="text/javascript">
+  
+  $('updatePanelLink').addEvent('click', function(e){
+      e.stop();
+            MUI.updateContent({
+                    element: $('help-panel'),
+                    loadMethod: 'xhr',
+                    url: 'pages/update_panel_right_panel_content.html',
+                    padding: { top: 8, right: 8, bottom: 8, left: 8 }
+            });
+      
+      
+  });
+  
+  /**
+   * write static html page into help-panel
+   * 
+   */
+  
+  $('restoreRightPanel').addEvent('click', function(e){
+      e.stop();
+            MUI.updateContent({
+                    element: $('help-panel'),
+                    loadMethod: 'xhr',
+                    url: 'pages/overview.html',
+                    padding: { top: 8, right: 8, bottom: 8, left: 8 }
+            });
+      
+      
+  });
+  
+  
+
+
+</script>

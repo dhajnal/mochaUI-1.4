@@ -1,0 +1,56 @@
+<h1>Parse HTML table data and render Canvas Pie Chart with tooltips</h1>
+<br>
+<h2>Load javascript and css from html using MUI.require </h2>
+<p style="padding-bottom: 12px;">Tested in FF20, Chrome 24 , Safari 5.x, and Opera9</p>
+
+<table class="pieChart">
+    <tr><th>Language  </th> <th>Value</th></tr>
+    <tr><td>JavaScript</td> <td>100  </td></tr>
+    <tr><td>CSS       </td> <td>200  </td></tr>
+    <tr><td>HTML      </td> <td>180  </td></tr>
+    <tr><td>PHP       </td> <td>50   </td></tr>
+    <tr><td>MySQL     </td> <td>320  </td></tr>
+    <tr><td>Apache    </td> <td>90   </td></tr>
+    <tr><td>Linux     </td> <td>30   </td></tr>
+</table>
+
+<table class="pieChart">
+    <tr><th>Browser</th> <th>Value</th></tr>
+    <tr><td>Safari </td> <td>180  </td></tr>
+    <tr><td>Firefox</td> <td>210  </td></tr>
+    <tr><td>IE     </td> <td>30   </td></tr>
+    <tr><td>Opera  </td> <td>120  </td></tr>
+</table>
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+window.addEvent('domready', function(){
+	
+        //console.log(MUI.path);
+        
+        new MUI.Require({ css: ['scripts/canvas/css/piechart.css'],
+			  //images: [MUI.path + 'scripts/images/background.gif'],
+			  js: ['scripts/canvas/scripts/piechart.js'],
+				onload: function(){
+					//new MyPlguins.MyGadget(arg);
+                                        PieChart.implement(new Options);
+                                        new PieChart();
+                                        
+				}		
+			});        
+                
+                
+                
+});
+
+
+</script>
+

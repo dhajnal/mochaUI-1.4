@@ -1,0 +1,115 @@
+<div id="formdiv">
+Post this form and refresh in same Window.
+    
+<form id="Form" name="userForm" action="pages/formWindow.html" method="POST">
+        <input type="hidden" name="action" value="formaction"/>
+        <fieldset><legend>data:</legend>
+             <div class="formRow">
+                <div class="formLabel">username: </div>
+                <div class="formField"><input type="text" class="minLength:5 input" name="username" id="username" value="" maxlength="40" size="40"  /></div>
+
+            </div>
+
+            <div class="formRow">
+                <div class="formLabel">Realname: </div>
+                <div class="formField"><input type="text" class="minLength:5 input" name="realname" id="realname" value="" maxlength="40" size="40"  /></div>
+
+            </div>
+
+            <div class="formField">
+                        <input type="submit" id="FormSubmit" class="button" value="Submit" />
+                        <input type="button" id="FormCancel" class="button" value="Cancel" />
+            </div>
+        </fieldset>
+           
+</form>    
+</div>
+<hr>
+
+<input type="button" class="button" id="closeButton" value="Close Window"/>
+<input type="button" class="button" id="closepanel3" value="Close panel3"/>
+<input type="button" class="button" id="restorepanel3" value="Restore panel3"/>
+
+
+
+<script type="text/javascript">
+  //close this window from form or from extra button
+  $('closeButton').addEvent('click' , function(e){
+       $('formWindow').retrieve('instance').close();
+      
+  });
+
+  $('FormCancel').addEvent('click' , function(e){
+       $('formWindow').retrieve('instance').close();
+      
+  }); 
+  
+  
+  var formValidate = new Form.Validator.Inline($('Form'));
+
+//!IMPORTANT Form.Request MUST update formWindow_content or mainPanel_pad DIV ! NOT mainPanel!!!!!
+new Form.Request($('Form'), $('formWindow_content'), {
+    requestOptions: {
+        spinnerOptions: {
+            message: 'Sending the form...'
+        }
+
+    },
+    onSend: function(){
+            $('spinner').show();
+    },
+    onSuccess: function(){
+            $('spinner').hide();
+            if ( $('formdiv') && MUI.options.standardEffects == true) {
+                   $('formdiv').setStyle('opacity', 0).get('morph').start({'opacity': 1});
+            }
+   }
+
+
+});
+
+
+// close panel 
+$('closepanel3').addEvent('click' , function(e){
+        
+         e.stop();
+         var ret = confirm('Delete panel3?'); 
+         if (!ret) return false;
+        
+                if ( $('panel3')){
+                     MUI.closePanel($('panel3'));
+                }else {
+                    alert('panel3 does not exists');
+                    
+                }
+                
+  });
+  
+  $('restorepanel3').addEvent('click' , function(e){
+        
+         e.stop();
+         var ret = confirm('Restore panel3?'); 
+         if (!ret) return false;
+        
+                if ( !$('panel3')){
+                     new MUI.Panel({
+                        id: 'panel3',
+                        title: 'Panel',
+                        contentURL: 'pages/lipsum.html',
+                        column: 'sideColumn2',
+                        height: 120
+                });
+                }else {
+                    alert('panel3 already exists');
+                    
+                }
+                
+  });
+  
+  
+  
+  
+  
+  
+  
+</script>

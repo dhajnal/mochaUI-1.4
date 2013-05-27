@@ -1,0 +1,31 @@
+/*
+Form Validator CSS
+*/
+
+.validation-failed {
+border: 1px solid #f00;
+}
+.validation-passed {
+border: 1px solid green;
+}
+.validation-advice {
+margin: 4px;
+padding: 4px;
+color:white; background: #f00 ;
+opacity: 0.9; 
+position: absolute; 
+float:  inside;
+alignment-baseline: central;
+border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+box-shadow: 0 0 3px blue;
+
+
+}
+.warning {
+	border: 1px solid #c66;
+}
+.warning-advice {
+	margin: 2px; padding: 2px; color:#fff; background-color:#bbb;
+}

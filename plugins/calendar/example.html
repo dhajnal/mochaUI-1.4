@@ -1,0 +1,210 @@
+<link rel="stylesheet" href="plugins/calendar/css/alternate.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="plugins/calendar/css/buttonb.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="plugins/calendar/css/dashboard.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="plugins/calendar/css/i-heart-ny.css" type="text/css" media="screen" />
+
+
+
+<form action="/" class="long">
+	<fieldset>
+		<legend>Default styling dates in future from now</legend>
+		<label for="date1">Date: </label>
+		<input class="calendar input" readonly="readonly" id="date1" name="date1" type="text" />
+	</fieldset> 
+</form>
+
+<p><a href="http://www.electricprism.com/aeron/calendar/" target="_blank">Documentation</a></p>
+
+<script type="text/javascript">
+    
+window.addEvent('domready', function() {
+    
+          
+          // future dates 
+          myCal2 = new Calendar({ date2: 'd/m/Y' }, { classes: ['dashboard'], direction: 1 });
+          myCal3 = new Calendar({ date3: 'd/m/Y' }, { classes: ['i-heart-ny'], direction: 1 });
+
+          //
+          myCal4 = new Calendar({ day1: { monthyear1: 'Y-m', day1: 'd' }});
+          myCal5 = new Calendar({ day2: { year2: 'Y', month2: 'm', day2: 'd' }});
+
+
+
+          myCal6 = new Calendar({ date6: 'd/m/Y' }, { classes: ['alternate'], navigation: 2 } );
+          myCal7 = new Calendar({ date7: 'd/m/Y' }, { direction: -1 });
+          myCal8 = new Calendar({ date8: 'd/m/Y' }, { direction: 7 });
+
+
+         // connected calendars 
+         myCal10 = new Calendar({ 
+             date10: 'F j, Y',
+             date11: 'F j, Y' },
+             { //blocked: ['20-25,31 12 *'],
+                direction: -1,
+                navigation: 2,
+                pad: 1,
+                classes:['alternate'], // OBAVEZNO AKO JE I SELECT GODINe
+                onHideComplete: function(){
+                    alert('Alert from onHideComplete custom function');
+                }
+         });
+             
+
+
+
+});
+</script>
+
+    
+      <form class="long" action="/">
+		<fieldset>
+			<legend>Select a date from the archive</legend>
+
+			<label for="date2">Date</label>
+			<input type="text" class="calendar input" name="date2" id="date2" readonly="" >
+		</fieldset>
+	</form>
+       <form class="long" action="/">
+		<fieldset>
+			<legend>Select a date from the archive</legend>
+
+			<label for="date3">Date</label>
+			<input type="text" class="calendar input" name="date3" id="date3" readonly="" >
+		</fieldset>
+	</form>
+
+        <form action="/">
+		<fieldset>
+			<legend>Reserve now for 2013</legend>
+
+			<label for="monthyear1">Date</label>
+			<select name="monthyear1" class="calendar input" id="monthyear1">
+				<option value="2013-01">January, 2013</option>
+				<option value="2013-02">February, 2013</option>
+				<option value="2013-03">March, 2013</option>
+				<option value="2013-04">April, 2013</option>
+				
+			</select>
+                        <!-- ovdje nema options!!!! -->
+			<select name="day1" id="day1" class="calendar">
+                           
+                        </select>
+		</fieldset>
+	</form>
+
+
+      <form class="short" action="/">
+		<fieldset>
+			<legend>Timeshare only available for the summer months</legend>
+
+			<label for="year2">Year</label>
+			<input type="text" class="calendar input" name="year2" id="year2" readonly="" value="2013">
+			<label for="month2">Month</label>
+			<select name="month2" class="calendar input" id="month2">
+				<option value="06">June</option>
+				<option value="07">July</option>
+				<option value="08">August</option>
+			</select>
+			<label for="day2">Day</label>
+			<input type="text" class="calendar input" name="day2" id="day2" readonly="" class="calendar">
+		</fieldset>
+	</form>
+
+
+Future / past calendar restrictions (and more).  <h2> Set direction to:  -1 past, 0 past + future, 1 future</h2>
+
+  <p>Calendar's <strong>directional property</strong> accepts any positive or negative
+  number with the following behavior: <em>n</em> (a positive number) the calendar is
+  future-only beginning at <em>n</em> days after today; <em>-n</em> (a negative number)
+  the calendar is past-only ending at <em>n</em> days before today; <em>0</em> (zero) the
+  calendar has <em>no</em> future or past restrictions (default). 
+  <br>For example to include today in the
+  direction 
+  <code>myCal1 = new Calendar({
+  date1: 'd/m/Y' }, { classes: ['alternate', ...], navigation: 2 });<br />
+  myCal2 = new Calendar({ date2: 'd/m/Y' }, { direction: -1 });<br />
+  myCal3 = new Calendar({ date3: 'd/m/Y' }, { direction: 7 });</code>
+    </p>
+
+  <form action="/" class="long">
+    <fieldset>
+      <legend>Select any date</legend> <label for="date6">Date</label>
+      <input class="calendar input" readonly="readonly" id="date6" name="date6" type="text" />
+    </fieldset>
+  </form>
+
+  <form action="/" class="long">
+    <fieldset>
+      <legend>Date from past</legend> <label for="date2">Date</label>
+      <input class="calendar input" readonly="readonly" id="date7" name="date2" type="text" />
+    </fieldset>
+  </form>
+
+  <form action="/" class="long">
+    <fieldset>
+      <legend>Make a reservation (must be made a week in advance)</legend>
+      <label for="date3">Date</label>
+      <input class="calendar input" readonly="readonly" id="date8" name="date3" type="text" />
+    </fieldset>
+  </form>
+
+
+  <h2>Connected calendars</h2>
+<form action="/" class="long">
+    <fieldset>
+      <legend>Days in past</legend> <label for="date10">Date</label>
+      <input class="alternate input" readonly="readonly" id="date10" name="date10" type="text" />
+    </fieldset>
+  </form>
+
+  <form action="/" class="long">
+    <fieldset>
+      <legend>One week in future</legend> <label for="date11">Date</label>
+      <input class="alternate input" readonly="readonly" id="date11" name="date11" type="text" />
+    </fieldset>
+  </form>
+  
+  <h2>Blocked days usin syntax as cron use.</h2>
+  <form action="/" class="long">
+    <fieldset>
+      <legend>Only saturdays</legend> <label for="date_saturday">date_saturday</label>
+      <input class="alternate input" readonly="readonly" id="date_saturday" name="date_saturday" type="text" />
+    </fieldset>
+  </form>
+  
+  <script type="text/javascript">
+       myCal_subota = new Calendar({ date_saturday : 'd.m.Y' }, { 
+           classes: ['alternate'], 
+           blocked : ['0 * 2013 0-5'], //only saturdays in 2013 godini
+           //blocked : ['* * * 0-5'], // only saturdays
+           navigation: 2,
+           offset: 0, // first day in a week is Sunday
+           direction:1,
+           tweak: {x: 10, y: 25}, // tweak calendar positioning
+           // custom days and Months with UTF-8 chars
+           days: ['Nedjelja', 'Ponedjeljak', 'Utorak', 'Srijeda', '\u010cetvrtak', 'Petak', 'Subota'], // days of the week starting at sunday
+           months: ['Sje\u010danj', 'Velja\u010da', 'O\u017eujak', 'Travanj', 'Svibanj', 'Lipanj', 'Srpanj', 'Kolovoz', 'Rujan', 'Listopad', 'Studeni', 'Prosinac'],
+        
+        } );
+      
+  </script>
+  
+
+
+
+
+  <ul>
+            <li><strong>blocked</strong> - An array of blocked (disabled) dates in the following format: <strong>'day month year'</strong>. The syntax is similar to <em>cron</em>: the values are separated by <strong>spaces</strong> and may contain <strong>* (asterisk) - (dash)</strong> and <strong>, (comma) delimiters</strong>. For example <strong>blocked: ['1 1 2007']</strong> would disable <em>January 1, 2007</em>; <strong>blocked: ['* 1 2007']</strong> would disable <em>all days (wildcard) in January, 2007</em>; <strong>blocked: ['1-10 1 2007']</strong> would disable <em>January 1 through 10, 2007</em>; while <strong>blocked: ['1,10 1 2007']</strong> would disable <em>January 1 and 10, 2007</em>. In combination: <strong>blocked: ['1-10,20,22,24 1-3 *']</strong> would disable <em>1 through 10, plus the 22nd and 24th of January through March for every (wildcard) year</em>. There is an optional additional value which is <strong>day of the week</strong> (0 - 6 with 0 being Sunday). For example <strong>blocked: ['0 * 2007 0,6']</strong> would disable <em>all weekends (saturdays and sundays) in 2007</em>.</li>
+            <li><strong>classes</strong> - An array of 12 CSS classes that are applied to the calendar construct: <em>calendar, prev, next, month, year, today, invalid, valid, inactive, active, hover, hilite</em>. It is not necessary (as of RC3) to pass all 11 classes in the array: if you only wanted to change the 1st class you would set <strong>classes: ['alternate']</strong>; if you only wanted to change the 1st and 4th classes you would need to set <strong>classes: ['alternate', '', '', 'mes']</strong>. The first class, by default <strong>'calendar'</strong>, is applied to the <strong>div</strong> that contains the calendar element, the calendar <strong>button</strong> and the <strong>input or select</strong> it is appended to. The <strong>'hilite'</strong> class (as of RC4) is applied to all days between 2 or more selected dates in multi-calendar functionality - see the <a target="demo" href="_multi_calendar.html">demo</a> for an example.</li>
+            <li><strong>days</strong> - An array of the 7 names of the days of the week, starting with sunday.</li>
+            <li><strong>direction</strong> - A positive or negative integer that determines the calendar's direction: <em>n</em> (a positive number) the calendar is future-only beginning at <em>n</em> days after today; <em>-n</em> (a negative number) the calendar is past-only ending at <em>n</em> days before today; <em>0</em> (zero) the calendar has <em>no</em> future or past restrictions (default). Note if you would like the calendar to be directional starting from today&ndash;as opposed to (1) tomorrow or (-1) yesterday&ndash;use a positive or negative fraction, such as direction: .5 (future-only, starting today).</li>
+            <li><strong>draggable</strong> - A boolean value, true or false, to indicate if the calendar element will be draggable&ndash;useful in case the calendar obstructs (or is obstructed by) some other element on the page. <strong>Note</strong>, requires <em>Mootools</em> to be compiled with the <em>Drag</em> component.</li>
+            <li><strong>months</strong> - An array of the 12 names of the month, starting with january.</li>
+            <li><strong>navigation</strong> - An integer&ndash;0, 1 or 2&ndash;indicating which navigation method the class will use: traditional navigation (<em>1</em>) where left and right arrows allow the user to <em>navigate by month</em> (default); improved navigation (<em>2</em>) where the user can <em>navigate by month or year</em>; and static navigation (<em>0</em>) which is actually <em>no navigation</em> at all.</li>
+            <li><strong>offset</strong> - An integer that indicates the first day of the week, with 0 being Sunday (default).</li>
+            <li><strong>onHideStart, onHideComplete, onShowStart, onShowComplete</strong> - Event handlers that can be used to trigger your own scripts.</li>
+            <li><strong>pad</strong> - An integer, the minimum number of days between calendars with <strong>multi-calendar</strong> functionality. For example: <em>1</em> (default) would enforce multiple calendars to space <strong>at least 1 day</strong> between picked dates; <em>7</em> would enforce a space of <strong>at least 1 week</strong>; while <em>0</em> (<strong>no padding</strong>) would allow multiple calendars to occupy the same date.</li>
+            <li><strong>tweak</strong> - An object with <em>{ x: 0, y: 0}</em> values that will "tweak" the calendar's placement on the page by <em>x</em> number of pixels <strong>horizontally</strong> and <em>y</em> number of pixels <strong>vertically</strong>.</li>
+    </ul>
+
+

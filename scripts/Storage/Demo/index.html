@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+    <a href="#" id="set">set</a>
+    <a href="#" id="get">get1</a>
+    
+    <a href="#" id="getb">getb</a>
+    
+    <div id="res"></div>
+    <script type='text/javascript' src='../../mootools-core-1.4.5-full-nocompat.js'></script>
+    
+    <script type="text/javascript" src="../Source/LocalStorage.js"></script>
+    <script type="text/javascript">
+    var st = new LocalStorage({debug:true});
+    
+    $('set').addEvent('click',function(){ st.set('name',{a:1,b:2})});
+    $('get').addEvent('click',function(){
+        $('res').set('html',st.get('name').a);
+    });
+    $('getb').addEvent('click',function(){
+        $('res').set('html',st.get('name').b);
+    });
+    
+    </script>
+</body>
+</html>

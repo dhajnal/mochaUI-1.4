@@ -126,12 +126,9 @@ form label {
 textarea, input, select {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
-	vertical-align: middle;				
-}
-
-textarea, input {
-	color: #ddd;
-	background: #282828;			
+	vertical-align: middle;	
+        color: #ddd;
+	background: #282828;	
 }
 
 .input {

@@ -398,22 +398,36 @@ initializeWindows = function(){
 		});
 	}
 	
+        /** Shoul have PHP enabled for this test*/
 	MUI.formtestsWindow = function() {
 		new MUI.Window({
-			id: 'formtests',
+			id: 'formtestsWindowID',
 			title: 'Form Tests',			
-			contentURL: 'pages/formtests.html',
+			contentURL: 'pages/formtests.php',
+                        width:550,
+                        height:500,
+                        data: {caller:'window'},
 			onContentLoaded: function(){
-				document.testForm.focusTest.focus();
-			}			
+				$('formtestsWindowForm').update_title.focus();
+			},
+                        onCloseComplete: function(){
+                            // cleanup Calendar alternate class div! 
+                            $$('.alternate').each( function(element){
+                                element.destroy();
+                        
+                            });
+                        }
 		});
 	};
+        
 	if ($('formtestsLinkCheck')) {
 		$('formtestsLinkCheck').addEvent('click', function(e){
-		e.stop();
-			MUI.formtestsWindow();
+                        e.stop();
+                        MUI.formtestsWindow();
 		});
-	}	
+	}
+        
+        
 
 	MUI.accordiantestWindow = function() {
 		var id = 'accordiantest';
@@ -876,6 +890,25 @@ initializeColumns = function() {
 				});
 				
 			});
+                        
+                        // Form in panel test
+                        $('FormtestLink').addEvent('click', function(e){
+                                if($('formtestsWindowID')){
+                                    alert('This form is already opened in Window');
+                                    return false;
+                                }
+				                                
+                                MUI.updateContent({
+					element: $('mainPanel'),
+					url: 'pages/formtests.php',
+					title: 'Form test in panel with PHP',
+                                        data:{caller:'Panel'},// who started form
+					padding: { top: 8, right: 8, bottom: 8, left: 8 }
+				});
+                                
+				
+			});
+                        
                         
                         // Form Window test
                         $('formWindowLink').addEvent('click', function(e){

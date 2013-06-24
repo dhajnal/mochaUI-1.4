@@ -1,0 +1,121 @@
+/* 
+    Document   : forms
+    Created on : 23.06.2013., 16:33:56
+    Author     : d1
+    Description:
+        Purpose of the stylesheet follows.
+*/
+.formLabel {
+	float: left;	
+	text-align: right;
+	width: 100px;
+	margin: 0 0 8px 0;
+	font-weight: bold;
+        font-size: 1.1em;
+}
+
+	
+.formField {
+	float: left;
+	padding: 0 0 0 0;
+	width: 230px;
+        margin-left: 4px;
+        margin-right: 4px;
+        
+}
+
+
+.regular-checkbox {
+	opacity:0;
+}
+.regular-checkbox + label {
+        display: inline;
+        width: auto !important;
+}
+
+.regular-checkbox+label {
+	background-color: #F1F1F1;
+	border: 1px solid #cacece;
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+        cursor: pointer;
+}
+
+.regular-checkbox+label:focus , .regular-checkbox:checked+label:focus {
+	background-color: #e9ecee;
+	border: 1px solid cadetblue;
+}
+
+
+
+.regular-checkbox:checked+label {
+	background-color: #e9ecee;
+	border: 1px solid #adb8c0;
+	
+	
+}
+
+.regular-checkbox:checked+label:after {
+	content: '✔';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+}
+
+.regular-checkbox:disabled+label{
+    background-color: gray;
+    
+}
+
+
+
+/* RADIO */
+    
+.regular-radio {
+        opacity: 0; 
+}
+
+
+.regular-radio + label {
+	-webkit-appearance: none;
+	background-color: #F1F1F1;
+	border: 1px solid #cacece;
+	padding: 9px;
+	border-radius: 50px;
+	display: inline-block;
+	position: relative;
+        cursor: pointer;
+        text-align:  left;
+        width: auto !important;
+        
+}
+
+.regular-radio:checked + label:after {
+	content: '';
+	width: 10px;
+	height: 10px;
+	border-radius: 33px;
+	position: absolute;
+	top: 4px;
+	background: #333;
+	text-shadow: 0px;
+	left: 4px;
+	font-size: 29px;
+}
+
+.regular-radio:checked + label {
+	background-color: #e9ecee;
+	border: 1px solid #adb8c0;
+	
+}
+
+
+/** display inline Radio or check boxes  */
+div .inline { float:left; 
+         margin-left: 2px;
+         margin-right: 2px;
+         font-weight: bold; }
+    

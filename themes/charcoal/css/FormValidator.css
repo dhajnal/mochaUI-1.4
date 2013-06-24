@@ -6,7 +6,7 @@ Form Validator CSS
 border: 1px solid #f00;
 }
 .validation-passed {
-border: 1px solid green;
+border: 1px solid  darkseagreen;
 }
 .validation-advice {
 margin: 4px;
@@ -20,6 +20,8 @@ border-radius: 3px;
 -webkit-border-radius: 3px;
 border-radius: 3px;
 box-shadow: 0 0 3px blue;
+z-index: 10000000;
+
 
 
 }

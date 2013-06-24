@@ -20,6 +20,7 @@ border-radius: 3px;
 -webkit-border-radius: 3px;
 border-radius: 3px;
 box-shadow: 0 0 3px blue;
+z-index: 10000000;
 
 
 }

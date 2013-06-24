@@ -14,7 +14,8 @@
 	<link rel="stylesheet" type="text/css" href="themes/default/css/Window.css" />
 	<link rel="stylesheet" type="text/css" href="themes/default/css/Tabs.css" />
         <link rel="stylesheet" type="text/css" href="themes/default/css/FormValidator.css" />
-        
+        <link rel="stylesheet" type="text/css" href="themes/default/css/Forms.css" />
+            
 
 	<!--[if IE]>
 		<script type="text/javascript" src="scripts/excanvas_r43.js"></script>
@@ -33,14 +34,13 @@
     <!-- menu tree -->     
     <link rel="stylesheet" type="text/css" href="plugins/tree/css/style.css" />
     <script type="text/javascript" src="plugins/tree/scripts/tree.js"></script>
+    
+    <link rel="stylesheet" href="plugins/calendar/css/alternate.css" type="text/css" media="screen" />
     <script type="text/javascript" src="plugins/calendar/scripts/calendar.js"></script>
      <script type="text/javascript" src="scripts/ckeditor/ckeditor.js"></script>
     <!-- main menus and windows -->       
     <script type="text/javascript" src="scripts/mocha-init.js"></script>
-    <!-- removi in production -->
-    <script type="text/javascript" src="scripts/helium.js"></script>
     
-
 </head>
 <body>
 
@@ -71,7 +71,7 @@
 								<li><a id="windoweventsLinkCheck" href="pages/events.html">Window Events</a></li>
 								<li><a id="containertestLinkCheck" href="pages/lipsum.html">Container Test</a></li>
 								<li><a id="iframetestsLinkCheck" href="pages/iframetests.html">Iframe Tests</a></li>
-								<li><a id="formtestsLinkCheck" href="pages/formtests.html">Form Tests</a></li>						
+								<li><a id="formtestsLinkCheck" href="pages/formtests.php.html">Form Tests</a></li>						
 								<li><a id="noCanvasLinkCheck" href="pages/lipsum.html">No Canvas Body</a></li>
 							</ul>
 						</li>
@@ -129,7 +129,7 @@
 			</div>
 
 			<div class="toolbox divider">	
-				<select id="themeControl" name="themeControl" size="1" onchange="MochaUI.Themes.init(this.options[this.selectedIndex].value)">
+				<select class="input" id="themeControl" name="themeControl" size="1" onchange="MochaUI.Themes.init(this.options[this.selectedIndex].value)">
 					<option id="chooseTheme" value="default" >Choose Theme:</option>
 					<option value="default" selected="selected">Default</option>
 					<option value="charcoal">Charcoal</option>

@@ -15,7 +15,7 @@ This is fork from Gregory Houston MochaUI.
 
 For details see pages/notes.html for changes and description.
 
-See demo at mochaui.domenacom.hr
+See demo at http://mochaui.domenacom.hr/
 
 darko.hajnal@domenacom.hr
 

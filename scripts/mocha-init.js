@@ -707,10 +707,22 @@ initializeWindows = function(){
 	};
 
 
+         /**  BMI Window calc **/
+        MUI.BMIWindow = function() {
+                    new MUI.Window({
+                            id: 'BMIWindow',
+                            title: 'BMI test for new patient',
+                            contentURL: 'pages/BMIForm.html',
+                            width: 500,
+                            height:680,
+                            x:250, 
+                            y:50,
+                            padding: { top: 8, right: 12, bottom: 10, left: 12 },
+                            scrollbars: false
+                    });
+            };
 
-	
-        
-        
+       
 	
 	// Build windows onLoad
 	MUI.parametricsWindow();
@@ -917,6 +929,17 @@ initializeColumns = function() {
 				
 			});
                         
+                        // Basal metabolism Form
+                         if ($('BMILink')) {
+                                $('BMILink').addEvent('click', function(e){
+                                        e.stop();
+                                        MUI.BMIWindow();
+
+                                });
+                        }
+
+                        
+                        
                         // Pie chart
                         $('pieChartLink').addEvent('click', function(e){
 				MUI.updateContent({
@@ -939,13 +962,13 @@ initializeColumns = function() {
 		title: 'Ajax Form',
 		contentURL: 'pages/ajax.form.html',
 		column: 'sideColumn1',
-		height: 230,
+		height: 200,
 		onContentLoaded: function(){
 			$('myForm').addEvent('submit', function(e){
 				e.stop();
 
 				$('spinner').show();
-				if ($('postContent') && MUI.options.standardEffects == true) {
+				if ($('postContent') && MUI.options.standardEffects === true) {
 					$('postContent').setStyle('opacity', 0);	
 				}
 				else {
@@ -962,7 +985,7 @@ initializeColumns = function() {
 						});			
 					},
 					onSuccess: function(){
-						if (MUI.options.standardEffects == true) {
+						if (MUI.options.standardEffects === true) {
 							$('postContent').setStyle('opacity', 0).get('morph').start({'opacity': 1});
 						}
 					}

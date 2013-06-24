@@ -1,0 +1,550 @@
+<style type="text/css">
+    .bmiDiv {
+        border: solid #036 1px;
+        width:120px;
+        height:30px;
+        text-align:  center;
+        font-family: "tahoma";
+        font-weight: bold;
+        font-size: 2em;
+        padding-top: 10px;
+       
+    }
+    
+    
+    
+</style>
+<h2>The BMR Calculator will calculate your <b>Basal Metabolic Rate (BMR),</b> the number of calories you should burn if you stayed in bed for 24 hours.</h2>
+<hr>         
+     <table cellspacing="5px" cellpadding="5px" align="center">
+          <tbody>
+                <tr><td align="right"><h2>Weight: </h2></td>
+                    <td><h2><select id="weight" size="1" class="bmiclass input" name="weight">
+                            <option class="" value="45">45</option>
+                            <option class="" value="46">46</option>
+                            <option class="" value="47">47</option>
+                            <option class="" value="48">48</option>
+                            <option class="" value="49">49</option>
+                            <option class="" value="50">50</option>
+                            <option class="" value="51">51</option>
+                            <option class="" value="52">52</option>
+                            <option class="" value="53">53</option>
+                            <option class="" value="54">54</option>
+                            <option class="" value="55">55</option>
+                            <option class="" value="56">56</option>
+                            <option class="" value="57">57</option>
+                            <option class="" value="58">58</option>
+                            <option class="" value="59">59</option>
+                            <option class="" value="60">60</option>
+                            <option class="" value="61">61</option>
+                            <option class="" value="62">62</option>
+                            <option class="" value="63">63</option>
+                            <option class="" value="64">64</option>
+                            <option class="" value="65">65</option>
+                            <option class="" value="66">66</option>
+                            <option class="" value="67">67</option>
+                            <option class="" value="68">68</option>
+                            <option class="" value="69">69</option>
+                            <option selected="" class="" value="70">70</option>
+                            <option class="" value="71">71</option>
+                            <option class="" value="72">72</option>
+                            <option class="" value="73">73</option>
+                            <option class="" value="74">74</option>
+                            <option class="" value="75">75</option>
+                            <option class="" value="76">76</option>
+                            <option class="" value="77">77</option>
+                            <option class="" value="78">78</option>
+                            <option class="" value="79">79</option>
+                            <option class="" value="80">80</option>
+                            <option class="" value="81">81</option>
+                            <option class="" value="82">82</option>
+                            <option class="" value="83">83</option>
+                            <option class="" value="84">84</option>
+                            <option class="" value="85">85</option>
+                            <option class="" value="86">86</option>
+                            <option class="" value="87">87</option>
+                            <option class="" value="88">88</option>
+                            <option class="" value="89">89</option>
+                            <option class="" value="90">90</option>
+                            <option class="" value="91">91</option>
+                            <option class="" value="92">92</option>
+                            <option class="" value="93">93</option>
+                            <option class="" value="94">94</option>
+                            <option class="" value="95">95</option>
+                            <option class="" value="96">96</option>
+                            <option class="" value="97">97</option>
+                            <option class="" value="98">98</option>
+                            <option class="" value="99">99</option>
+                            <option class="" value="100">100</option>
+                            <option class="" value="101">101</option>
+                            <option class="" value="102">102</option>
+                            <option class="" value="103">103</option>
+                            <option class="" value="104">104</option>
+                            <option class="" value="105">105</option>
+                            <option class="" value="106">106</option>
+                            <option class="" value="107">107</option>
+                            <option class="" value="108">108</option>
+                            <option class="" value="109">109</option>
+                            <option class="" value="110">110</option>
+                            <option class="" value="111">111</option>
+                            <option class="" value="112">112</option>
+                            <option class="" value="113">113</option>
+                            <option class="" value="114">114</option>
+                            <option class="" value="115">115</option>
+                            <option class="" value="116">116</option>
+                            <option class="" value="117">117</option>
+                            <option class="" value="118">118</option>
+                            <option class="" value="119">119</option>
+                            <option class="" value="120">120</option>
+                            <option class="" value="121">121</option>
+                            <option class="" value="122">122</option>
+                            <option class="" value="123">123</option>
+                            <option class="" value="124">124</option>
+                            <option class="" value="125">125</option>
+                            <option class="" value="126">126</option>
+                            <option class="" value="127">127</option>
+                            <option class="" value="128">128</option>
+                            <option class="" value="129">129</option>
+                            <option class="" value="130">130</option>
+                            <option class="" value="131">131</option>
+                            <option class="" value="132">132</option>
+                            <option class="" value="133">133</option>
+                            <option class="" value="134">134</option>
+                            <option class="" value="135">135</option>
+                            <option class="" value="136">136</option>
+                            <option class="" value="137">137</option>
+                            <option class="" value="138">138</option>
+                            <option class="" value="139">139</option>
+                            <option class="" value="140">140</option>
+                            <option class="" value="141">141</option>
+                            <option class="" value="142">142</option>
+                            <option class="" value="143">143</option>
+                            <option class="" value="144">144</option>
+                            <option class="" value="145">145</option>
+                            <option class="" value="146">146</option>
+                            <option class="" value="147">147</option>
+                            <option class="" value="148">148</option>
+                            <option class="" value="149">149</option>
+                        </select>
+                   (kg)</h2> </td>
+                 </tr>
+                 <tr>
+                     <td class="nobr" align="right"><h2>Height: </h2></td>
+                     <td><h2><select id="height" size="1" class="bmiclass input" name="height">
+    <option class="" value="130">130</option>
+    <option class="" value="131">131</option>
+    <option class="" value="132">132</option>
+    <option class="" value="133">133</option>
+    <option class="" value="134">134</option>
+    <option class="" value="135">135</option>
+    <option class="" value="136">136</option>
+    <option class="" value="137">137</option>
+    <option class="" value="138">138</option>
+    <option class="" value="139">139</option>
+    <option class="" value="140">140</option>
+    <option class="" value="141">141</option>
+    <option class="" value="142">142</option>
+    <option class="" value="143">143</option>
+    <option class="" value="144">144</option>
+    <option class="" value="145">145</option>
+    <option class="" value="146">146</option>
+    <option class="" value="147">147</option>
+    <option class="" value="148">148</option>
+    <option class="" value="149">149</option>
+    <option class="" value="150">150</option>
+    <option class="" value="151">151</option>
+    <option class="" value="152">152</option>
+    <option class="" value="153">153</option>
+    <option class="" value="154">154</option>
+    <option class="" value="155">155</option>
+    <option class="" value="156">156</option>
+    <option class="" value="157">157</option>
+    <option class="" value="158">158</option>
+    <option class="" value="159">159</option>
+    <option class="" value="160">160</option>
+    <option class="" value="161">161</option>
+    <option class="" value="162">162</option>
+    <option class="" value="163">163</option>
+    <option class="" value="164">164</option>
+    <option class="" value="165">165</option>
+    <option class="" value="166">166</option>
+    <option class="" value="167">167</option>
+    <option class="" value="168">168</option>
+    <option class="" value="169">169</option>
+    <option selected="" class="" value="170">170</option>
+    <option class="" value="171">171</option>
+    <option class="" value="172">172</option>
+    <option class="" value="173">173</option>
+    <option class="" value="174">174</option>
+    <option class="" value="175">175</option>
+    <option class="" value="176">176</option>
+    <option class="" value="177">177</option>
+    <option class="" value="178">178</option>
+    <option class="" value="179">179</option>
+    <option class="" value="180">180</option>
+    <option class="" value="181">181</option>
+    <option class="" value="182">182</option>
+    <option class="" value="183">183</option>
+    <option class="" value="184">184</option>
+    <option class="" value="185">185</option>
+    <option class="" value="186">186</option>
+    <option class="" value="187">187</option>
+    <option class="" value="188">188</option>
+    <option class="" value="189">189</option>
+    <option class="" value="190">190</option>
+    <option class="" value="191">191</option>
+    <option class="" value="192">192</option>
+    <option class="" value="193">193</option>
+    <option class="" value="194">194</option>
+    <option class="" value="195">195</option>
+    <option class="" value="196">196</option>
+    <option class="" value="197">197</option>
+    <option class="" value="198">198</option>
+    <option class="" value="199">199</option>
+    <option class="" value="200">200</option>
+    <option class="" value="201">201</option>
+    <option class="" value="202">202</option>
+    <option class="" value="203">203</option>
+    <option class="" value="204">204</option>
+    <option class="" value="205">205</option>
+    <option class="" value="206">206</option>
+    <option class="" value="207">207</option>
+    <option class="" value="208">208</option>
+    <option class="" value="209">209</option>
+    <option class="" value="210">210</option>
+    <option class="" value="211">211</option>
+    <option class="" value="212">212</option>
+    <option class="" value="213">213</option>
+    <option class="" value="214">214</option>
+    <option class="" value="215">215</option>
+    <option class="" value="216">216</option>
+    <option class="" value="217">217</option>
+    <option class="" value="218">218</option>
+    <option class="" value="219">219</option>
+</select>    (cm)</h2>
+                 </td>
+                </tr>
+
+                <tr>
+                    <td class="nobr" align="right"><h2>Age: </h2></td>
+                    <td><h2><select id="age" size="1" class="input bmiclass" name="age">
+    <option class="" value="18">18</option>
+    <option class="" value="19">19</option>
+    <option selected="" class="" value="20">20</option>
+    <option class="" value="21">21</option>
+    <option class="" value="22">22</option>
+    <option class="" value="23">23</option>
+    <option class="" value="24">24</option>
+    <option class="" value="25">25</option>
+    <option class="" value="26">26</option>
+    <option class="" value="27">27</option>
+    <option class="" value="28">28</option>
+    <option class="" value="29">29</option>
+    <option class="" value="30">30</option>
+    <option class="" value="31">31</option>
+    <option class="" value="32">32</option>
+    <option class="" value="33">33</option>
+    <option class="" value="34">34</option>
+    <option class="" value="35">35</option>
+    <option class="" value="36">36</option>
+    <option class="" value="37">37</option>
+    <option class="" value="38">38</option>
+    <option class="" value="39">39</option>
+    <option class="" value="40">40</option>
+    <option class="" value="41">41</option>
+    <option class="" value="42">42</option>
+    <option class="" value="43">43</option>
+    <option class="" value="44">44</option>
+    <option class="" value="45">45</option>
+    <option class="" value="46">46</option>
+    <option class="" value="47">47</option>
+    <option class="" value="48">48</option>
+    <option class="" value="49">49</option>
+    <option class="" value="50">50</option>
+    <option class="" value="51">51</option>
+    <option class="" value="52">52</option>
+    <option class="" value="53">53</option>
+    <option class="" value="54">54</option>
+    <option class="" value="55">55</option>
+    <option class="" value="56">56</option>
+    <option class="" value="57">57</option>
+    <option class="" value="58">58</option>
+    <option class="" value="59">59</option>
+    <option class="" value="60">60</option>
+    <option class="" value="61">61</option>
+    <option class="" value="62">62</option>
+    <option class="" value="63">63</option>
+    <option class="" value="64">64</option>
+    <option class="" value="65">65</option>
+    <option class="" value="66">66</option>
+    <option class="" value="67">67</option>
+    <option class="" value="68">68</option>
+    <option class="" value="69">69</option>
+    <option class="" value="70">70</option>
+    <option class="" value="71">71</option>
+    <option class="" value="72">72</option>
+    <option class="" value="73">73</option>
+    <option class="" value="74">74</option>
+</select> Year</h2>
+                  </td>
+                </tr>
+                <tr>
+                    <td align="right"><h2>Your Gender?</h2></td>
+                    <td>
+                        <div id="genderDiv">
+                            <table>
+                                <tr>
+                                    
+                                    <td><input id="male" class="gendergroup regular-radio" type="radio" checked="checked" value="male" name="gender">
+                                        <label for="male"></label>
+                                    </td>
+                                    <td>Male</td>
+                                    
+                                    <td><input id="female" class="gendergroup regular-radio" type="radio" value="female" name="gender">
+                                        <label for="female"></label>
+                                    </td>
+                                    <td>Female</td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                    </td>
+                </tr>
+     </table>
+<div id="activityDiv">
+     <table align="center" cellpadding="2px" width="400px;">
+                <tr>
+                    <td colspan="2" style=" background:  lightgray; font-weight: bold;">Select an activity factor:</td>
+                </tr>    
+                <tr>
+                    <td><input type="radio" class="radiogroup regular-radio" checked="checked" value="1.2" name="activity" id="Sedentary">
+                        <label for="Sedentary"></label>
+                    </td>
+                    <td><b>Sedentary:</b> little or no exercise</td>
+                </tr>    
+		 <tr>
+                     <td><input type="radio" class="radiogroup regular-radio" value="1.35" name="activity" id="Light">
+                     <label for="Light"></label></td>
+                     <td><b>Light:</b> light exercise/sports 1-3 days per week</td>
+		 </tr>
+                 <tr>
+                     <td><input type="radio" class="radiogroup regular-radio" value="1.55" name="activity" id="Moderate">
+                     <label for="Moderate"></label></td>
+                     <td><b>Moderate:</b> moderate exercise/sports 3-5 days per week</td>
+		 </tr>
+                 <tr>
+                     <td><input type="radio" class="radiogroup regular-radio" value="1.73" name="activity" id="Hard">
+                     <label for="Hard"></label></td>
+                     <td><b>Hard:</b> hard exercise/sports 6-7 days per week</td>
+		 </tr>  
+                 <tr>
+                     <td><input type="radio" class="radiogroup regular-radio" value="1.9" name="activity" id="Extra_hard">
+                     <label for="Extra_hard"></label></td>
+                     <td><b>Extra hard:</b> extreme hard daily exercise/sports or job</td>
+                 </tr>
+     </table>
+</div>
+     
+     <table align="center" width="400px;"> 
+                <tr>
+                    <td colspan="3" style=" background:  lightgray; font-weight: bold;">Results:</td>
+                </tr> 
+                <tr>
+                    <td style=" font-weight: bold;">The Body Mass Index (BMI) is:</td>
+                    <td><div id="bmi" class="bmiDiv"></div></td>
+                    <td>( kg/m<sup>2</sup> )</td>
+                </tr>
+                <tr>
+                    <td style=" font-weight: bold;">Basal Metabolic Rate (BMR):</td>
+                    <td><div id="bmr" class="bmiDiv"></div></td>
+                    <td>( kcal/day )</td>
+                </tr>
+                <tr>
+                    <td style=" font-weight: bold;">BMR with activity factor:</td>
+                    <td><div id="bmra" class="bmiDiv"></div></td>
+                    <td>( kcal/day )</td>
+                </tr>
+                
+    </table>
+<hr>
+    <div id="descriptionDiv" style=" padding-left: 35px;">
+        <div id="under" class="desc">If Your BMI is less than 18.5, you are underweight</div>
+        <div id="desirable" class="desc">If Your BMI is 18.5 to less than 25, your weight is desirable</div>
+        <div id="ower" class="desc">If Your BMI is 25 to less than 30, you are overweight</div>
+        <div id="obese" class="desc">If Your BMI is 30 or more, you are obese</div>
+    </div>    
+    
+    <hr>  
+    <div class="buttonRow">
+        <button id="BMIWindowClose" class="button">Close</button>
+    </div>
+        
+    
+
+
+
+<!-- submit form with AJAX -->
+
+<script type="text/javascript">
+
+
+/**
+ * bmi functions
+ * Body mass Index
+ * @param {Object} name description
+ */
+function bmi( param ) {
+    var h = Number( param.height);
+    var w = Number( param.weight);
+   
+     if(  h > 0.0 && w > 0.0 ){
+          h = Math.pow(h,2);
+          var bmi = (w / h)* 10000;
+         // Round hacking .....
+          bmi = Math.round(bmi*10)/10;
+          return bmi;
+     }
+     return 0;
+   
+}
+
+
+/**
+ * @param {Object} name description
+ * @param.gender  male or female
+ * @param.weight  in kg  e.g 70
+ * @param.height   1.75 metres
+ * @param.age  e.g 47 years
+ */
+function basalMet( param ) {
+    var gender = param.gender;
+    var w = Number( param.weight);
+    var h = Number( param.height)/100; 
+    var age = Number( param.age); 
+   
+    
+    var ret = 0;
+    if( gender === 'male'){
+        ret = 66.473+(13.7516*w )+(500.33*h)-(6.755*age);
+    }
+    if( gender === 'female'){
+        ret = 655.0955+(9.5634*w)+(184.96*h)-(4.6756*age);
+    }
+    return Math.round(ret*10)/10;
+    
+    
+}
+
+/**
+ *   display formated result
+ */
+function basalMetActivity( bmet ,activity_value ){
+     return Math.round( bmet*activity_value*10 ) / 10;
+    
+}
+
+   
+   
+   
+window.addEvent('domready', function(){
+    
+    var activity_value = $('activityDiv').getElement("input[name=activity]:checked").get('value');
+    var bmivalue = bmi( {'height': $('height').get('value') ,'weight':$('weight').get('value')});
+    $('bmi').set('html' , bmivalue );
+    
+    //  basal metabolism
+    var gender = $('genderDiv').getElement("input[name=gender]:checked").get('value');
+    var param = { 
+        'gender':gender,
+        'height': $('height').get('value') ,
+        'weight':$('weight').get('value'),
+        'age': $('age').get('value')
+    };
+    
+    // basal metabolism results 
+    $('bmr').set('html' , basalMet(param));
+    // basal metabolism with activity factor
+    $('bmra').set('html' ,basalMetActivity( basalMet(param) ,activity_value ) );
+    
+    
+    /**  ON CLICK SECTION ***/
+    // Activity on click events ------------------------------------------------------
+    var radiogr = $$('.radiogroup');
+    radiogr.addEvent('change', function(e){
+        e.stop();
+        // basal metabolism 
+        var gender = $('genderDiv').getElement("input[name=gender]:checked").get('value');
+        var activity_value = this.get('value');
+        var param = { 
+            'gender':gender,
+            'height': $('height').get('value') ,
+            'weight':$('weight').get('value'),
+            'age': $('age').get('value')
+        };
+
+        // basal metabolism with activity factor
+        $('bmra').set('html' ,basalMetActivity( basalMet(param) ,activity_value ));
+       
+    
+    }); 
+    
+    //*********** Male and female radios on change  ********
+    $$('.gendergroup').addEvent('change', function(e){
+        e.stop();
+        // basal metabolizam 
+        var gender = this.get('value');
+        var activity_value = $('activityDiv').getElement("input[name=activity]:checked").get('value');
+        var param = { 
+            'gender':gender,
+            'height': $('height').get('value') ,
+            'weight':$('weight').get('value'),
+            'age': $('age').get('value')
+        };
+
+        // update divs 
+        $('bmr').set('html' , basalMet(param));
+        
+        $('bmra').set('html' , basalMetActivity( basalMet(param) ,activity_value )   );
+        
+    });
+    
+    
+    //----- BMI calculator SELECT: change weight or height , update all results divs
+    $$('.bmiclass').addEvent('change' , function(e){
+       e.stop();
+       // update bmi div
+       $('bmi').set('html' , bmi({'height':$('height').get('value') ,'weight':$('weight').get('value')}) );
+       
+         
+        var gender = $('genderDiv').getElement("input[name=gender]:checked").get('value');
+        var activity_value = $('activityDiv').getElement("input[name=activity]:checked").get('value');
+        var param = { 
+            'gender':gender,
+            'height': $('height').get('value') ,
+            'weight':$('weight').get('value'),
+            'age': $('age').get('value')
+        };
+
+         
+        $('bmr').set('html' , basalMet(param));
+        
+        $('bmra').set('html' ,basalMetActivity( basalMet(param) ,activity_value ) );
+        
+       
+    });
+    
+    // close this window
+    if($('BMIWindowClose')){
+        $('BMIWindowClose').addEvent('click', function(e){
+            e.stop();
+            $('BMIWindow').retrieve('instance').close();
+        });
+    }
+    
+    
+    
+});//onload
+   
+   
+         
+</script>
